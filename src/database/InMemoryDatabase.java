@@ -25,7 +25,6 @@ public class InMemoryDatabase {
 				System.out.println("Please provide a Name and Value!");
 				return;
 			} else {
-
 				if(!map.isEmpty() && (map.get(tempData[1]) != tempData[2]) ) {  // Dec cont 
 					decrementValueCount(map.get(tempData[1])); // dec count since the value has been switched 
 					addCountValue(tempData[2]); // inc vacle on the new value
@@ -38,7 +37,6 @@ public class InMemoryDatabase {
 				}
 				map.put(tempData[1], tempData[2]);
 			}
-
 		} catch (Exception e) {
 			System.out.println(e); // log exception 
 
@@ -58,14 +56,12 @@ public class InMemoryDatabase {
 				System.out.println("Please enter a valid command!");
 				return;
 			} else {
-
 				if(!transactionMap.isEmpty()) {
 					addCountValue(transactionMap.get(transactionMap.lastKey()));
 					map.put(transactionMap.lastKey(), transactionMap.get(transactionMap.lastKey())); // copy data back to the man table
 					transactionMap.put(transactionMap.lastKey(), null);
 				}
 			}
-
 		} catch (Exception e) {
 			System.out.println(e); // log exception 
 		}
@@ -119,7 +115,6 @@ public class InMemoryDatabase {
 	public void deleteData(String userData) { 
 		try {
 			String[] tempData = userData.split(" ");
-
 			if(tempData.length != 2) {
 				System.out.println("Please provide a Name!");
 				return;
@@ -131,7 +126,6 @@ public class InMemoryDatabase {
 		} catch (Exception e) {
 			System.out.println(e); // log exception 
 		}
-		
 	}
 
 	/**

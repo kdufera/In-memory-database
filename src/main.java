@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import database.InMemoryDatabase;
+import utils.command;
 
 public class main {
 
@@ -14,33 +15,33 @@ public class main {
 			String input = scanner.nextLine();
 
 			switch (input.toString().split(" ")[0]) { // Switch statement to handle different cases 
-			case "SET" :  
+			case command.SET :  
 				inMemDatabase.setData(input.toString());
 				continue; 
 
-			case "GET" :  
+			case command.GET :  
 				if (inMemDatabase.getData(input) == null) {
 					continue;		
 				} else {
 					System.out.println(inMemDatabase.getData(input));
 					continue; 
 				}
-			case "DELETE" :  
+			case command.DELETE :  
 				inMemDatabase.deleteData(input);
 				continue;
-			case "COUNT":  
+			case command.COUNT:  
 				inMemDatabase.countData(input);
 				continue;
-			case "BEGIN":  
+			case command.BEGIN:  
 				inMemDatabase.beginTransactions(input);
 				continue;
-			case "ROLLBACK":  
+			case command.ROLLBACK:  
 				inMemDatabase.rollBackTransactions(input);
 				continue;
-			case "COMMIT" : 
+			case command.COMMIT : 
 				inMemDatabase.commitData(input);
 				continue;
-			case "END":  
+			case command.END:  
 				System.out.println(" >> : " + "Exiting!");
 				break;
 			default: 
