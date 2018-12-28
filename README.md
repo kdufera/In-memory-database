@@ -1,6 +1,6 @@
 
 # In-memory-database
-implementation of In memory database. This is a Java project which simulates DB operations such as 
+Implementation of In memory database. This is a Java project which simulates DB operations such as 
  GET​,​ SET​,​ DELETE​, BEGIN, ROLLBACK, COMMIT, COUNT operations. 
 
 Prerequisites:
